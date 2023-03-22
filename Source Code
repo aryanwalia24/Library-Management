@@ -29,3 +29,36 @@ class Library:
         else:
             print("Sorry, This book is either not available or has already been issued to someone else. Please wait until the book is available")
             return False
+    def returnBook(shelf, bookName):
+        a=input('Enter your name: ')
+        b=input('Enter you gmail ID: ')
+        while '@gmail.com'in b:
+            break
+        while '@gmail.com'not in b:
+            print('WRONG ID! Enter the valid ID')
+            IPython.display.display(IPython.display.Audio(r"D:\1[94].mp3", autoplay=True))
+            print()
+            b=input('Enter you gmail ID: ')
+            continue
+        print("Thanks for returning this book! Hope you enjoyed reading it. Have a great day ahead!")
+        shelf.books.append(bookName)
+        
+    
+def return_menu():
+    print()
+    print('''Please choose an option:
+              1. Return to main menu
+              2. Exit library''')
+    global b
+    b=int(input("Enter a choice: "))
+    if b == 1:
+        pass
+    while b == 2:
+        print("Thanks for choosing Your Library. Have a great day ahead!")
+        IPython.display.display(IPython.display.Audio(r"C:\Users\Aryan Walia\OneDrive\Documents\Exit.mp3", autoplay=True))
+        break
+    if b>2:
+        IPython.display.display(IPython.display.Audio(r"D:\1[94].mp3", autoplay=True))
+        print('''Invalid Choice!
+        choose the correct option''')
+
