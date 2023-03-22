@@ -7,5 +7,3 @@ Team members:
 2. Avantika     - 2210990197
 3. Ayush Thakur - 2210990205
 4. Aryan        - 2210990174
-
-.
