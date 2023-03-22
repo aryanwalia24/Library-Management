@@ -1,5 +1,7 @@
 # PROJECT CODE
 
+#source code
+
 import IPython
 b=0
 class Library:
@@ -29,6 +31,7 @@ class Library:
         else:
             print("Sorry, This book is either not available or has already been issued to someone else. Please wait until the book is available")
             return False
+
     def returnBook(shelf, bookName):
         a=input('Enter your name: ')
         b=input('Enter you gmail ID: ')
@@ -61,4 +64,51 @@ def return_menu():
         IPython.display.display(IPython.display.Audio(r"D:\1[94].mp3", autoplay=True))
         print('''Invalid Choice!
         choose the correct option''')
+        
+        
+            
 
+class Student: 
+    def requestBook(shelf):
+        shelf.book = input("Enter the name of the book you want to borrow: ")
+        return shelf.book
+
+    def returnBook(shelf):
+        shelf.book = input("Enter the name of the book you want to return: ")
+        return shelf.book
+         
+
+if True:
+    YourLibrary = Library(["Algorithms", "Django", "Clrs", "Python Notes","CASA","python","basic electronics"])
+    student = Student()
+    # YourLibrary.displayAvailableBooks()
+    while(True):
+        welcomeMsg = '''\n ====== WELCOME TO YOUR LIBRARY ======
+        Please choose an option:
+        1. List all the books
+        2. Request a book
+        3. Return a book
+        '''
+        IPython.display.display(IPython.display.Audio(r"C:\Users\Aryan Walia\OneDrive\Documents\Welcome.mp3", autoplay=True))
+        
+        
+        while b!=2:
+            print(welcomeMsg)
+            a = int(input("Enter a choice: "))
+            if a == 1:
+                YourLibrary.displayAvailableBooks()
+                return_menu()
+
+            elif a == 2:
+                YourLibrary.borrowBook(student.requestBook())
+                return_menu()
+
+            elif a == 3:
+                YourLibrary.returnBook(student.returnBook())
+                return_menu()
+
+            else:
+                IPython.display.display(IPython.display.Audio(r"D:\1[94].mp3", autoplay=True))
+                print("Invalid Choice!")
+        else:
+            break
