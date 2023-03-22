@@ -1,34 +1,34 @@
 # PROJECT CODE
 
+import IPython
+b=0
+class Library:
+    def init(shelf, listOfBooks):
+        shelf.books = listOfBooks
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    def displayAvailableBooks(shelf):
+        print("Books present in this library are: ")
+        for book in shelf.books: 
+            print(" *" + book)
+    
+    def borrowBook(shelf, bookName):
+        if bookName in shelf.books:
+            a=input('Enter your name: ')
+            b=input('Enter you gmail ID: ')
+            while '@gmail.com'in b:
+                break
+            while '@gmail.com'not in b:
+                print('WRONG ID! Enter the valid ID')
+                IPython.display.display(IPython.display.Audio(r"D:\1[94].mp3", autoplay=True))
+                print()
+                b=input('Enter you gmail ID: ')
+                continue
+            print(f"You have been issued {bookName}. Please keep it safe and return it within 30 days")
+            shelf.books.remove(bookName)
+            return True
+        else:
+            print("Sorry, This book is either not available or has already been issued to someone else. Please wait until the book is available")
+            return False
     def returnBook(shelf, bookName):
         a=input('Enter your name: ')
         b=input('Enter you gmail ID: ')
@@ -61,3 +61,4 @@ def return_menu():
         IPython.display.display(IPython.display.Audio(r"D:\1[94].mp3", autoplay=True))
         print('''Invalid Choice!
         choose the correct option''')
+
