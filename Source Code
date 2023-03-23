@@ -1,7 +1,5 @@
 # PROJECT CODE
 
-#source code
-
 import IPython
 b=0
 class Library:
@@ -112,3 +110,4 @@ if True:
                 print("Invalid Choice!")
         else:
             break
+
