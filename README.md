@@ -1,5 +1,5 @@
 # Library-Management
-Project - Library Management
+Python Project - Library Management
 
 Team members:
 
